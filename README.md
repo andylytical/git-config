@@ -16,7 +16,7 @@ git config --global alias.type 'cat-file -t'
 ```
 
 ## Bash aliases
-`curl -o ~/.bashrc.d/git.sh `
+`curl -o ~/.bashrc.d/git.sh https://raw.githubusercontent.com/andylytical/git-config/master/bashrc.d/git.sh`
 
 # See also:
 * https://haacked.com/archive/2014/07/28/github-flow-aliases/
