@@ -7,6 +7,7 @@
 git config --global alias.br branch
 git config --global alias.brs 'branch -a'
 git config --global alias.branches 'branch -a'
+git config --global alias.rmb '!git push origin :$1; git branch -d $1'
 # workflow
 git config --global alias.newb 'checkout -b'
 git config --global alias.co checkout
@@ -21,6 +22,8 @@ git config --global alias.mstest '!git checkout test && git pull && git merge --
 git config --global alias.msmaster '!git checkout master && git pull && git merge --squash $1'
 # Config meta
 git config --global alias.aliases 'config --get-regexp alias'
+# Debugging aliases
+git config --global alias.debug '!GIT_TRACE=1 git'
 
 ```
 
