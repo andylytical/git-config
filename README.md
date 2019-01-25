@@ -4,6 +4,8 @@
 ## Git aliases
 ```
 git config --global alias.br branch
+git config --global alias.brs 'branch -a'
+git config --global alias.branches 'branch -a'
 git config --global alias.ci commit
 git config --global alias.co checkout
 git config --global alias.df 'diff --color-words'
