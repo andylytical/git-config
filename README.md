@@ -15,6 +15,7 @@ git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --grap
 git config --global alias.newb 'checkout -b'
 git config --global alias.st status
 git config --global alias.type 'cat-file -t'
+
 ```
 
 ## Bash aliases
