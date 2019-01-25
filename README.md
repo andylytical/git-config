@@ -19,6 +19,8 @@ git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --grap
 # Merge squash
 git config --global alias.mstest '!git checkout test && git pull && git merge --squash $1'
 git config --global alias.msmaster '!git checkout master && git pull && git merge --squash $1'
+# Config meta
+git config --global alias.aliases 'config --get-regexp alias'
 
 ```
 
