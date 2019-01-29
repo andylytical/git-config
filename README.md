@@ -9,7 +9,7 @@ git config --global alias.brs 'branch -a'
 git config --global alias.branches 'branch -a'
 git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #'
 # workflow
-git config --global alias.new 'checkout -b'
+git config --global alias.new '!git checkout master; git pull; git checkout -b "${1}"'
 git config --global alias.co checkout
 git config --global alias.go checkout
 git config --global alias.amend 'commit -a --amend'
