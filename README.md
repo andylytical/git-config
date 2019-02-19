@@ -16,7 +16,7 @@ git config --global alias.amend 'commit -a --amend'
 git config --global alias.st status
 git config --global alias.df 'diff --color-words'
 git config --global alias.bdiff '!git checkout "${1}" && git pull && git checkout production && git pull && git diff --color-words production..."${1}" #'
-git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+git config --global alias.hist 'log --oneline --graph --decorate --all'
 # Config meta
 git config --global alias.aliases 'config --get-regexp alias'
 # Debugging aliases
