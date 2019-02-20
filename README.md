@@ -11,7 +11,9 @@ git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #'
 # workflow
 git config --global alias.new '!git checkout production; git pull; git reset --hard origin/production; git checkout -b "${1}" #'
 git config --global alias.co checkout
-git config --global alias.go '!checkout "${1}"; git pull #'
+git config --global alias.go '!git checkout "${1}"; git pull #'
+git config --global alias.test '!git checkout test; git pull #'
+git config --global alias.prod '!git checkout "production"; git pull #'
 git config --global alias.amend 'commit -a --amend'
 # info
 git config --global alias.st status
