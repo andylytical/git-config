@@ -1,0 +1,26 @@
+#!/bin/bash
+
+REPONAMES=( control hiera legacy )
+REPOCOLORS=( 7 6 208 )
+PUPDIR="$HOME/puppet"
+
+die() {
+    echo "ERROR: (${BASH_SOURCE[1]} [${BASH_LINENO[0]}] ${FUNCNAME[1]}) $*" 1>&2
+    exit 1
+}
+
+
+l=7 # header length
+let end="${#REPONAMES[*]}-1"
+for i in $(seq 0 $end); do
+    repo=${REPONAMES[$i]}
+    reponame=$( echo "$repo" | tr [a-z] [A-Z] )
+    c=${REPOCOLORS[$i]}
+    printf "\e[30;48;5;${c}m %${l}s \e[0m  " "$reponame"
+    repodir="$PUPDIR/$repo"
+    git --git-dir "$repodir/.git" branches \
+    | sed -ne 's/^* // p'
+done
+echo
+
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
