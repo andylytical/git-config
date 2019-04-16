@@ -8,3 +8,4 @@
 
 # See also:
 * https://haacked.com/archive/2014/07/28/github-flow-aliases/
+* https://documentup.com/skwp/git-workflows-book
