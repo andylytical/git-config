@@ -12,6 +12,7 @@ git config --global alias.go '!git checkout "${1}"; git pull #'
 git config --global alias.test '!git checkout test; git pull #'
 git config --global alias.prod '!git checkout "production"; git pull #'
 git config --global alias.amend 'commit -a --amend'
+git config --global alias.mc 'diff --name-only --diff-filter=U'
 # info
 git config --global alias.st status
 git config --global alias.df 'diff --color-words'
