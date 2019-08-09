@@ -29,5 +29,5 @@ find "./bin" -type f -executable -name 'mk_*' -printf '%f\n' \
 done
 
 echo
-echo "Suggest adding '$BIN' to PATH, if not there already"
+echo "Suggest adding '$HOME/bin' to PATH, if not there already"
 echo
