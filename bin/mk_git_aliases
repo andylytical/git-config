@@ -4,17 +4,17 @@
 git config --global alias.b branch
 git config --global alias.ba 'branch -a'
 git config --global alias.branches 'branch -a'
-git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #'
+git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #' #remove branch
 # workflow
 git config --global alias.co checkout
-git config --global alias.go '!git co "${1}"; git pull #'
+git config --global alias.go '!git co "${1}"; git pull #' #go to latest version of this branch
 git config --global alias.amend 'commit -a --amend'
-git config --global alias.mc 'diff --name-only --diff-filter=U'
-git config --global alias.new '!git go master; git reset --hard origin/master; git co -b "${1}" master #'
+git config --global alias.mc 'diff --name-only --diff-filter=U' #merge conflicts
+git config --global alias.new '!git go master; git reset --hard origin/master; git co -b "${1}" master #' #new branch from master
 # info
 git config --global alias.st status
 git config --global alias.df 'diff --color-words'
-git config --global alias.bdiff '!git go "${1}" && git go master && git diff --color-words master..."${1}" #'
+git config --global alias.bdiff '!git go "${1}" && git go master && git diff --color-words master..."${1}" #' #branch diff (compared to master)
 git config --global alias.h 'log --oneline --graph --decorate --all -10'
 git config --global alias.hist 'log --oneline --graph --decorate --all'
 # Config meta
