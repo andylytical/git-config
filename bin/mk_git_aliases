@@ -13,7 +13,7 @@ git config --global alias.mc 'diff --name-only --diff-filter=U' #merge conflicts
 git config --global alias.new '!git go master; git reset --hard origin/master; git co -b "${1}" master #' #new branch from master
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.fp 'forcepush'
-git config --global alias.mkprod '!git branch --track -f production master; git fp origin production'
+git config --global alias.mkprod '!git branch -f production $(git rev-parse HEAD); git fp origin production'
 # info
 git config --global alias.st 'status -s -b'
 git config --global alias.df 'diff --color-words'
