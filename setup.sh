@@ -30,6 +30,12 @@ find "$BASE/bin" -type f -executable -name 'mk_*' -printf '%f\n' \
     [[ -x "$runme" ]] && "$runme"
 done
 
+# Copy external scripts to HOME/bin
+src="https://raw.githubusercontent.com/fboender/multi-git-status/master/mgitstatus"
+tgt="$HOME/bin/mgits"
+curl -o "$tgt" "$src"
+chmod +x "$tgt"
+
 echo
 echo "Suggest adding '$HOME/bin' to PATH, if not there already"
 echo
