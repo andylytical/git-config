@@ -9,7 +9,7 @@ alias rmtopics='git branch | grep topic | grep -vE "^\*|\/$USER\/" | xargs -n1 g
 
 # quickly switch between repos; assumes a common repo directory
 repo() {
-    workdir=~/working
+    workdir=${GIT_REPO_DIR:-~/working}
     if [[ $# -lt 1 ]] ; then
         cd "$workdir"
     else
