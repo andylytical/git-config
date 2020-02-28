@@ -18,6 +18,7 @@ git config --global alias.fp 'push --force-with-lease'
 git config --global alias.mkprod '!git branch -f production $(git rev-parse HEAD); git push --force-with-lease origin production; git branch -d production'
 # info
 git config --global alias.st 'status -sb'
+git config --global alias.dc 'diff --cached --color-words'
 git config --global alias.df 'diff --color-words'
 git config --global alias.bdiff '!git go "${1}" && git go master && git diff --color-words master..."${1}" #' #branch diff (compared to master)
 git config --global alias.h 'log --oneline --graph --decorate --all -10'
