@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# remove old aliases
+git config --global --remove-section alias
+
 # branches
 git config --global alias.b branch
 git config --global alias.ba 'branch -a'
