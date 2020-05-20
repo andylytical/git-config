@@ -2,7 +2,7 @@
 alias gdiff='git diff --color-words master...$(git rev-parse --abbrev-ref HEAD)'
 
 # Exclude .git from recursive grep
-alias ggrep='grep -R --exclude-dir=.git'
+alias ggrep='grep -R --exclude-dir=.git --exclude-dir=spec --exclude=Gemfile* --exclude=Rakefile'
 
 # Delete all topic branches (in current repo) that aren't mine
 alias rmtopics='git branch | grep topic | grep -vE "^\*|\/$USER\/" | xargs -n1 git branch -d'
