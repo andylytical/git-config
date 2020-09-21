@@ -19,7 +19,6 @@ git config --global alias.new '!git go master; git reset --hard origin/master; g
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.fp 'push --force-with-lease'
 git config --global alias.mkremote '!git branch -f ${1}; git push --force-with-lease origin ${1}; git branch -d ${1} #'
-git config --global alias.mkprod 'mkremote production'
 # info
 git config --global alias.st 'status -sb'
 git config --global alias.dc 'diff --cached --color-words'
