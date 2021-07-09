@@ -1,32 +1,60 @@
 #!/bin/bash
 
-# remove old aliases
+#
+# REMOVE OLD ALIASES
+#
 git config --global --remove-section alias
 
-# branches
+#
+# BRANCHES
+#
 git config --global alias.b branch
 git config --global alias.ba 'branch -a'
 git config --global alias.bv 'branch -vv'
 git config --global alias.branches 'branch -a'
 git config --global alias.rv 'remote -v'
-git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #' #remove branch
-# workflow
+
+# remove branch on local and origin
+git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #'
+
+#rename branch to start with "WIP/" prefix
+git config --global alias.mkwip '!git fetch origin && git go "${1}" && git b -m "WIP/${1}" && git push -u origin "WIP/${1}" && git push origin ":${1}" #'
+
+
+#
+# WORKFLOW
+#
 git config --global alias.co checkout
-git config --global alias.go '!git co "${1}"; git pull #' #go to latest version of this branch
 git config --global alias.amend 'commit -a --amend'
-git config --global alias.mc 'diff --name-only --diff-filter=U' #merge conflicts
-git config --global alias.new '!git go master; git reset --hard origin/master; git co -b "${1}" master #' #new branch from master
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.fp 'push --force-with-lease'
+
+#go to latest version of this branch
+git config --global alias.go '!git co "${1}"; git pull #'
+
+#merge conflicts
+git config --global alias.mc 'diff --name-only --diff-filter=U'
+
+#new branch from main
+git config --global alias.new '!git go main; git reset --hard origin/main; git co -b "${1}" main #'
+
+#make a new branch on remote only
 git config --global alias.mkremote '!git branch -f ${1}; git push --force-with-lease origin ${1}; git branch -d ${1} #'
-# info
+
+#
+# INFO
+#
 git config --global alias.st 'status -sb'
 git config --global alias.dc 'diff --cached --color-words'
 git config --global alias.df 'diff --color-words'
-git config --global alias.bdiff '!git go "${1}" && git go master && git diff --color-words master..."${1}" #' #branch diff (compared to master)
 git config --global alias.h 'log --oneline --graph --decorate --all -10'
 git config --global alias.hist "log --graph --all --date=short --pretty=format:'%C(auto)%cd %C(auto)%h%C(auto) %cE:%d %C(auto)%s'"
+
+#branch diff (compared to main)
+git config --global alias.bdiff '!git go "${1}" && git go main && git diff --color-words main..."${1}" #'
+
 # Config meta
 git config --global alias.aliases 'config --get-regexp alias'
+
 # Debugging aliases
 git config --global alias.debug '!GIT_TRACE=1 git'
