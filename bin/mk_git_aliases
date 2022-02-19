@@ -15,7 +15,7 @@ git config --global alias.branches 'branch -a'
 git config --global alias.rv 'remote -v'
 
 # remove branch on local and origin
-git config --global alias.rmb '!git push origin :"${1}"; git branch -d "${1}" #'
+git config --global alias.bd '!git push origin :"${1}"; git branch -d "${1}" #'
 
 #rename branch to start with "WIP/" prefix
 git config --global alias.mkwip '!git fetch origin && git go "${1}" && git b -m "WIP/${1}" && git push -u origin "WIP/${1}" && git push origin ":${1}" #'
