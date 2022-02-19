@@ -1,7 +1,7 @@
 # git-config
 
 # Quick start
-1. curl https://raw.githubusercontent.com/andylytical/git-config/master/quickstart.sh | bash
+1. curl https://raw.githubusercontent.com/andylytical/git-config/main/quickstart.sh | bash
 
 
 # Slow start
