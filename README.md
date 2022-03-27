@@ -1,10 +1,10 @@
 # git-config
 
-# Quick start
-1. curl https://raw.githubusercontent.com/andylytical/git-config/main/quickstart.sh | bash
+## One command setup
+`export QS_GIT_REPO=https://github.com/andylytical/git-config; curl https://raw.githubusercontent.com/andylytical/quickstart/main/quickstart.sh | bash`
 
 
-# Slow start
+## Manual setup
 1. git clone https://github.com/andylytical/git-config.git
 1. cd git-config
 1. ./setup.sh

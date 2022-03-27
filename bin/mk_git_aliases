@@ -51,7 +51,7 @@ git config --global alias.h 'log --oneline --graph --decorate --all -10'
 git config --global alias.hist "log --graph --all --date=short --pretty=format:'%C(auto)%cd %C(auto)%h%C(auto) %cE:%d %C(auto)%s'"
 
 #branch diff (compared to main)
-git config --global alias.bdiff '!git go "${1}" && git go main && git diff --color-words main..."${1}" #'
+git config --global alias.bdiff '!git go main && git go "${1}" && git diff --color-words main..."${1}" #'
 
 # Config meta
 git config --global alias.aliases 'config --get-regexp alias'
