@@ -25,6 +25,7 @@ git config --global alias.mkwip '!git fetch origin && git go "${1}" && git b -m 
 # WORKFLOW
 #
 git config --global alias.co checkout
+git config --global alias.cob 'checkout -b'
 git config --global alias.amend 'commit -a --amend'
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.fp 'push --force-with-lease'
