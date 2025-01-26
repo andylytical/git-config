@@ -1,8 +1,11 @@
 # Alias for git diff lsst branches
-alias gdiff='git diff --color-words master...$(git rev-parse --abbrev-ref HEAD)'
+alias gdiff='git diff --color-words main...$(git rev-parse --abbrev-ref HEAD)'
 
 # Exclude .git from recursive grep
 alias ggrep='grep -RI --exclude-dir=.git --exclude-dir=spec --exclude=Gemfile* --exclude=Rakefile'
+
+# Exclude .git from tree
+alias gree='tree -a -I .git/'
 
 # Delete all local topic branches (in current repo) that aren't mine
 alias rmtopics='git branch | grep topic | grep -vE "^\*|\/$USER\/" | xargs -n1 git branch -d'
